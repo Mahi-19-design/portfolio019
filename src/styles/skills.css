@@ -1,0 +1,122 @@
+.skills {
+  padding: 120px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.skills-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.skills-tree-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  padding: 60px 0;
+  min-height: 800px;
+}
+
+.tree-lines-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.tree-row {
+  display: flex;
+  justify-content: center;
+  gap: 6rem;
+  position: relative;
+  width: 100%;
+  z-index: 2;
+  flex-wrap: wrap;
+}
+
+.skill-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  width: 110px;
+  cursor: pointer;
+}
+
+.skill-icon-wrapper {
+  width: 90px;
+  height: 90px;
+  background: rgba(10, 15, 25, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+
+.glow-effect {
+  position: absolute;
+  inset: -10px;
+  background: var(--skill-color, var(--accent-primary));
+  opacity: 0;
+  filter: blur(25px);
+  transition: opacity 0.4s ease;
+  z-index: -1;
+}
+
+.skill-node:hover .glow-effect {
+  opacity: 0.15;
+}
+
+.skill-node:hover .skill-icon-wrapper {
+  border-color: var(--skill-color);
+  box-shadow: 0 0 35px var(--skill-color), 0 0 20px rgba(0, 0, 0, 0.5);
+  transform: translateY(-8px);
+}
+
+.skill-img {
+  width: 50%;
+  height: 50%;
+  object-fit: contain;
+}
+
+.skill-name {
+  font-size: 0.9rem;
+  color: #8fa0b5;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.skill-node:hover .skill-name {
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+/* Mobile Alignment Fix */
+@media (max-width: 992px) {
+  .tree-row { gap: 4rem; }
+}
+
+@media (max-width: 768px) {
+  .skills-tree-container { gap: 4rem; min-height: auto; padding: 40px 0; }
+  .tree-row { gap: 2rem; }
+  .skill-node { width: 85px; }
+  .skill-icon-wrapper { width: 75px; height: 75px; border-radius: 18px; }
+  .skill-name { font-size: 0.75rem; letter-spacing: 0.5px; }
+  .tree-lines-svg { opacity: 0.5; }
+}

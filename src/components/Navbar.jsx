@@ -45,7 +45,7 @@ const Navbar = ({ activeSection }) => {
       <div className="navbar-container">
         <a href="#hero" className="navbar-logo" onClick={(e) => handleClick(e, 'hero')}>
           <span className="logo-accent">&lt;</span>
-          Portfolio
+          Mahi Patel
           <span className="logo-accent">/&gt;</span>
         </a>
         

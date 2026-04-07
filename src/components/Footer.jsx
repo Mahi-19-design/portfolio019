@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="footer-logo">
             <a href="#hero" className="navbar-logo">
               <span className="logo-accent">&lt;</span>
-              Portfolio
+              Mahi Patel
               <span className="logo-accent">/&gt;</span>
             </a>
             <p>Building the future with AI and innovation</p>

@@ -1,0 +1,146 @@
+.education {
+  padding: 120px 20px;
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-primary);
+}
+
+.education::after {
+  content: '';
+  position: absolute;
+  bottom: -10%;
+  left: -5%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(0, 242, 254, 0.05) 0%, transparent 70%);
+  filter: blur(50px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.education-header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.timeline-full-width {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  padding-left: 3rem;
+}
+
+.timeline-main-rail {
+  position: absolute;
+  left: 0;
+  top: 1rem;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, var(--accent-primary), transparent);
+  opacity: 0.3;
+  transform-origin: top;
+  z-index: 1;
+}
+
+.timeline-content-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.timeline-block {
+  position: relative;
+}
+
+.timeline-ring {
+  position: absolute;
+  left: -3.55rem;
+  top: 1.5rem;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--bg-primary);
+  border: 4px solid var(--accent-primary);
+  z-index: 3;
+}
+
+.edu-glass-card {
+  background: rgba(15, 20, 30, 0.4);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 24px;
+  padding: 2.2rem;
+  display: flex;
+  gap: 2rem;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.edu-glass-card:hover {
+  transform: translateX(12px);
+  border-color: rgba(0, 242, 254, 0.2);
+  background: rgba(20, 25, 40, 0.6);
+  box-shadow: 0 20px 50px rgba(0, 242, 254, 0.1);
+}
+
+.edu-icon-circle {
+  width: 70px;
+  height: 70px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  flex-shrink: 0;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.edu-info-simple {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.edu-info-simple h5 {
+  font-size: 1.4rem;
+  color: #fff;
+  letter-spacing: -0.5px;
+}
+
+.school-v {
+  font-size: 1.1rem;
+  color: #8fa0b5;
+  font-weight: 600;
+}
+
+.time-v {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--accent-primary);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.desc-v {
+  font-size: 1rem;
+  color: #718096;
+  font-style: italic;
+  margin-top: 0.8rem;
+}
+
+@media (max-width: 768px) {
+  .education { padding: 80px 20px; }
+  .timeline-full-width { padding-left: 0; }
+  .timeline-main-rail, .timeline-ring { display: none; }
+  .edu-glass-card {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 2rem;
+  }
+}

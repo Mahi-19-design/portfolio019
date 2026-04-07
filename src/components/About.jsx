@@ -1,82 +1,128 @@
+import { motion } from 'framer-motion'
 import '../styles/about.css'
+
+const educationData = [
+  {
+    degree: 'B.E. Computer Engineering',
+    school: 'Swaminarayan University',
+    duration: '2025 - 2029 (Expected)',
+    desc: 'Artificial Intelligence Enthusiast',
+    icon: '🎓',
+    color: '#00f2fe'
+  },
+  {
+    degree: 'Higher Secondary Education',
+    school: 'Vidhya Mandir Trust',
+    duration: '12th Boards',
+    desc: 'Percentage: 80%',
+    icon: '🏫',
+    color: '#4facfe'
+  },
+  {
+    degree: 'Secondary Education',
+    school: 'Navjivan English Medium School',
+    duration: '10th Boards',
+    desc: 'Percentage: 94.5%',
+    icon: '📖',
+    color: '#a1c4fd'
+  }
+]
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.2 }
+  }
+}
+
+const itemVariants = {
+  hidden: { y: 25, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: { type: "spring", stiffness: 90, damping: 15 }
+  }
+}
 
 const About = () => {
   return (
     <section id="about" className="about">
       <div className="container">
-        <h2 className="section-title">About Me</h2>
-        <div className="about-content">
-          <div className="about-image">
-            <div className="image-frame">
-              <div className="profile-placeholder">
-                <span className="profile-icon">👨‍💻</span>
-              </div>
-              <div className="image-glow"></div>
+        <motion.div 
+            className="about-wrapper"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1 }}
+        >
+            <h2 className="section-title">About Me</h2>
+            
+            <div className="about-bio-integrated">
+              <h3>Computer Engineering Student & AI Enthusiast</h3>
+              <p>
+                I'm a passionate Computer Engineering student specializing in Artificial Intelligence 
+                and Machine Learning. Currently pursuing my degree with a focus on creating intelligent 
+                systems that solve real-world problems.
+              </p>
+              <p>
+                My journey in AI started with simple machine learning models and has evolved into 
+                working with deep learning, computer vision, and natural language processing. I believe 
+                in the power of AI to transform industries and improve lives.
+              </p>
             </div>
-          </div>
-          <div className="about-text">
-            <h3>Computer Engineering Student & AI Enthusiast</h3>
-            <p>
-              I'm a passionate Computer Engineering student specializing in Artificial Intelligence 
-              and Machine Learning. Currently pursuing my degree with a focus on creating intelligent 
-              systems that solve real-world problems.
-            </p>
-            <p>
-              My journey in AI started with simple machine learning models and has evolved into 
-              working with deep learning, computer vision, and natural language processing. I believe 
-              in the power of AI to transform industries and improve lives.
-            </p>
-            <p>
-              I'm constantly learning and exploring new technologies, with a particular interest in 
-              generative AI, computer vision, and ethical AI development.
-            </p>
-            <div className="education">
-              <h4>Education</h4>
-              <div className="education-item">
-                <div className="education-icon">🎓</div>
-                <div>
-                  <h5>B.E. Computer Engineering</h5>
-                  <p>Swaminarayan University • Expected 2029</p>
-                  <p className="education-desc">Artifical Intelligence Enthusiast</p>
-                </div>
-                
-              </div>
+            
+            <div className="about-education-integrated">
+              <h4 className="edu-stack-title">Educational Journey</h4>
               
-              
-            </div>
+              <div className="timeline-v2-premium">
+                <motion.div 
+                    className="timeline-rail-v2"
+                    initial={{ scaleY: 0 }}
+                    whileInView={{ scaleY: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1.5, ease: "easeInOut" }}
+                ></motion.div>
 
- <div className="education">
-              <h4>Education </h4>
-              <div className="education-item">
-                <div className="education-icon">🎓</div>
-                <div>
-                  <h5>Higher Secondary Education</h5>
-                  <p>Vidhya Mandir Trust </p>
-                  <p className="education-desc">Percentage in 12th boards : 80% </p>
-                </div>
-                
+                <motion.div 
+                  className="timeline-items-v2"
+                  variants={containerVariants}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.1 }}
+                >
+                  {educationData.map((edu, index) => (
+                    <motion.div 
+                      key={index} 
+                      className="timeline-item-v2"
+                      variants={itemVariants}
+                    >
+                      <motion.div 
+                        className="timeline-node-v2" 
+                        style={{ backgroundColor: edu.color, color: edu.color }}
+                        initial={{ scale: 0 }}
+                        whileInView={{ scale: 1 }}
+                        transition={{ delay: index * 0.3, type: "spring" }}
+                      ></motion.div>
+                      
+                      <div className="edu-card-premium" style={{ '--accent-edu': edu.color }}>
+                        <div className="edu-icon-shell-premium">
+                          <span className="edu-icon-inner-glow" style={{ backgroundColor: edu.color }}></span>
+                          {edu.icon}
+                        </div>
+                        <div className="edu-content-premium">
+                          <h5>{edu.degree}</h5>
+                          <p className="school-name-premium">{edu.school}</p>
+                          <span className="duration-tag-premium">{edu.duration}</span>
+                          <p className="desc-text-premium">{edu.desc}</p>
+                        </div>
+                      </div>
+                    </motion.div>
+                  ))}
+                </motion.div>
               </div>
-              
-              
             </div>
- <div className="education">
-              <h4>Education</h4>
-              <div className="education-item">
-                <div className="education-icon">🎓</div>
-                <div>
-                  <h5>Secondary Education</h5>
-                  <p>Navjivan English Medium School</p>
-                  <p className="education-desc">Percentage in 10th boards : 94.5%</p>
-                </div>
-                
-              </div>
-              
-              
-            </div>
-
-
-          </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   )
