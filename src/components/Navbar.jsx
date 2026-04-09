@@ -44,11 +44,11 @@ const Navbar = ({ activeSection }) => {
   return (
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
-        <a href="#hero" className="navbar-logo" onClick={(e) => handleClick(e, 'hero')}>
+        {/* <a href="#hero" className="navbar-logo" onClick={(e) => handleClick(e, 'hero')}>
           <span className="logo-accent">&lt;</span>
-          Mahi Patel
+          MP
           <span className="logo-accent">/&gt;</span>
-        </a>
+        </a> */}
         
         <button className={`menu-toggle ${isMenuOpen ? 'active' : ''}`} onClick={toggleMenu}>
           <span></span>

@@ -15,7 +15,7 @@ const hackathonsData = [
     tags: ['React', 'Gemini API', 'Node.js', 'Prototyping' , 'Express' , 'MongoDB' ],
     icon: '🚀',
     github: 'https://github.com/Mahi-19-design/IISC',
-    image: 'https://images.unsplash.com/photo-1664575185263-45229279743a?auto=format&fit=crop&q=80&w=800'
+    image: 'https://res.cloudinary.com/dy5jgthmt/image/upload/q_auto/f_auto/v1775722902/Screenshot_2026-04-09_134957_pt9zle.png'
   },
   {
     id: 2,
@@ -30,7 +30,7 @@ const hackathonsData = [
     tags: ['UI/UX', 'Figma', 'React', 'Agri-Tech' , 'Node.js' , 'MongoDB' , 'Express' , 'Gemini API'],
     icon: '💡',
     github: 'https://github.com/Mahi-19-design/CropSphere',
-    image: 'https://images.unsplash.com/photo-1560493676-04071c5f467b?auto=format&fit=crop&q=80&w=800'
+    image: 'https://res.cloudinary.com/dy5jgthmt/image/upload/v1775722921/Screenshot_2026-04-09_135047_it2wyn.png'
   }
 ]
 

@@ -24,7 +24,15 @@ const Certifications = () => {
       issuer: 'IISC Bangalore',
       date: 'March 2026',
       description: 'Learned leading data science and analytics practices, methodologies, and tools. Examined benefits and challenges of a data-driven approach for businesses.',
-      image: 'https://res.cloudinary.com/dy5jgthmt/image/upload/q_auto/f_auto/v1775125987/Screenshot_2026-03-09_145730_rx62b8.png',
+      image: 'https://res.cloudinary.com/dy5jgthmt/image/upload/v1775721803/WhatsApp_Image_2026-04-08_at_1.55.52_PM_b52jlv.jpg',
+    },
+    {
+      id: 4,
+      title: 'AI Mastermind Quiz',
+      issuer: 'Vishanu Institute of Technology',
+      date: 'March 2026',
+      description: 'Learned leading data science and analytics practices, methodologies, and tools. Examined benefits and challenges of a data-driven approach for businesses.',
+      image: 'https://res.cloudinary.com/dy5jgthmt/image/upload/q_auto/f_auto/v1775735349/quiz_yr77xo.jpg ',
     }
   ]
 
