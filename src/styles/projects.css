@@ -16,7 +16,7 @@
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2.5rem;
   margin-top: 3rem;
   position: relative;
@@ -92,7 +92,7 @@
 .project-description {
   color: #8fa0b5;
   margin-bottom: 2rem;
-  flex: 1;
+  flex-grow: 1;
   line-height: 1.7;
   font-size: 1.05rem;
   position: relative;
@@ -106,6 +106,7 @@
   margin-bottom: 2rem;
   position: relative;
   z-index: 1;
+  min-height: 80px; /* Ensures uniform height even with different number of tags */
 }
 
 .tech-tag {
@@ -127,25 +128,29 @@
 
 .project-links {
   display: flex;
-  gap: 1.2rem;
+  gap: 1rem;
   position: relative;
   z-index: 1;
+  margin-top: auto;
 }
 
 .project-link {
+  flex: 1;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
-  padding: 10px 20px;
+  padding: 10px 15px;
   background: rgba(255, 255, 255, 0.03);
   color: #fff;
   text-decoration: none;
   border-radius: 8px;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 500;
   transition: all 0.3s ease;
   border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(5px);
+  white-space: nowrap;
 }
 
 .project-link:hover {
@@ -161,9 +166,56 @@
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
 @media (max-width: 768px) {
   .projects-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
+  
+  .project-card {
+    padding: 1.8rem;
+  }
+
+  .project-header h3 {
+    font-size: 1.5rem;
+  }
 }
+
+@media (max-width: 480px) {
+  .project-card {
+    padding: 1.5rem;
+  }
+
+  .project-description {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .project-technologies {
+    min-height: auto;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .tech-tag {
+    padding: 4px 10px;
+    font-size: 0.8rem;
+  }
+
+  .project-links {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .project-link {
+    width: 100%;
+  }
+}
+

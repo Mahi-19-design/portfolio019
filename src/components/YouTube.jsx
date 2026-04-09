@@ -89,11 +89,11 @@ const YouTube = () => {
           </div>
         </motion.div>
         
-        <div className="video-grid compact-grid">
+        <div className="video-grid">
           {videos.map((video, index) => (
             <motion.div 
               key={video.id} 
-              className="video-card card compact-card"
+              className="video-card card"
               initial={{ opacity: 0, scale: 0.9, rotateY: 20 }}
               whileInView={{ opacity: 1, scale: 1, rotateY: 0 }}
               viewport={{ once: true }}

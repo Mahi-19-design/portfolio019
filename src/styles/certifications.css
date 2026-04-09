@@ -77,5 +77,28 @@
 @media (max-width: 768px) {
   .certifications-grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .cert-content {
+    padding: 1.8rem;
+  }
+
+  .cert-image-container {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cert-content {
+    padding: 1.5rem;
+  }
+
+  .cert-header h3 {
+    font-size: 1.3rem;
+  }
+
+  .cert-image-container {
+    height: 180px;
   }
 }

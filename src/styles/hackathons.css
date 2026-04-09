@@ -18,14 +18,46 @@
 
 .hackathons-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
   margin-top: 40px;
+}
+
+@media (max-width: 1024px) {
+  .hackathons-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
 }
 
 @media (max-width: 768px) {
   .hackathons-grid {
     grid-template-columns: 1fr;
+    gap: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hack-content {
+    padding: 20px 15px;
+  }
+
+  .hack-image-container {
+    height: 180px;
+  }
+
+  .hack-header {
+    gap: 12px;
+  }
+
+  .hack-icon-glow {
+    width: 45px;
+    height: 45px;
+    font-size: 1.5rem;
+  }
+
+  .hack-info h3 {
+    font-size: 1.25rem;
   }
 }
 

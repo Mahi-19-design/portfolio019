@@ -91,6 +91,12 @@ section {
   padding: 0 20px;
 }
 
+@media (max-width: 480px) {
+  .container {
+    padding: 0 10px;
+  }
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -147,6 +153,18 @@ section {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
+@media (max-width: 768px) {
+  .card {
+    padding: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 1.2rem;
+  }
+}
+
 .card:hover {
   transform: translateY(-8px) scale(1.02);
   border-color: rgba(0, 242, 254, 0.4);
@@ -167,11 +185,12 @@ section {
 
 @media (max-width: 480px) {
   section {
-    padding: 60px 15px;
+    padding: 60px 10px;
   }
 
   .section-title {
     font-size: 2rem;
+    margin-bottom: 2.5rem;
   }
 }
 
