@@ -14,17 +14,17 @@ const Certifications = () => {
       id: 2,
       title: 'Data Science & Analytics',
       issuer: 'HP LIFE Foundation',
-      date: 'January 19th, 2026',
+      date: 'January 19th, 2026', 
       description: 'Learned leading data science and analytics practices, methodologies, and tools. Examined benefits and challenges of a data-driven approach for businesses.',
       image: 'https://res.cloudinary.com/dy5jgthmt/image/upload/q_auto/f_auto/v1775125987/Screenshot_2026-03-09_145730_rx62b8.png',
     },
-     {
+    {
       id: 3,
-      title: 'ArtPart CodeForge Hackathon',
-      issuer: 'IISC Banglore',
-      date: 'March 30th, 2026',
-      description: 'Participated in the ArtPart CodeForge Hackathon, a 24-hour event focused on building innovative solutions using AI and emerging technologies. Collaborated with a team to develop a proof-of-concept application, gaining hands-on experience in rapid prototyping, technical problem-solving, and teamwork under time pressure.',
-      image: 'https://res.cloudinary.com/dy5jgthmt/image/upload/q_auto/f_auto/v1775126125/WhatsApp_Image_2026-04-02_at_4.04.36_PM_gzy6ix.jpg',
+      title: 'IISC ArtForge Hackathon',
+      issuer: 'IISC Bangalore',
+      date: 'March 2026',
+      description: 'Learned leading data science and analytics practices, methodologies, and tools. Examined benefits and challenges of a data-driven approach for businesses.',
+      image: 'https://res.cloudinary.com/dy5jgthmt/image/upload/q_auto/f_auto/v1775125987/Screenshot_2026-03-09_145730_rx62b8.png',
     }
   ]
 

@@ -15,8 +15,8 @@ const videos = [
     id: 2,
     title: 'Heart-Up My Sleeve - UI Clone',
     description: 'A frontend clone inspired by the “Heart Up My Sleeve” interface, focusing on layout structure, styling, and responsive design.',
-    thumbnail: 'https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&q=80&w=800',
-    videoUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    thumbnail: 'https://img.youtube.com/vi/COBVn3FIX68/maxresdefault.jpg',
+    videoUrl: 'https://www.youtube.com/watch?v=COBVn3FIX68',
     sourceCode: 'https://github.com/Mahi-19-design/Cloned-projects/tree/main/heart-up-my-sleeve',
     tags: ['CSS', 'HTML']
   },
@@ -57,6 +57,11 @@ const videos = [
     tags: ['CSS', 'HTML']
   }
 ]
+const getEmbedId = (url) => {
+  const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+  const match = url.match(regExp);
+  return (match && match[2].length === 11) ? match[2] : null;
+};
 
 const YouTube = () => {
   return (
@@ -101,17 +106,17 @@ const YouTube = () => {
               }}
             >
               <div className="video-thumbnail-container">
-                <img src={video.thumbnail} alt={video.title} className="video-thumbnail" />
-                <motion.a 
-                  href={video.videoUrl} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="play-button"
-                  whileHover={{ scale: 1.2, backgroundColor: "var(--accent-primary)" }}
-                >
-                  <span className="play-icon">▶</span>
-                </motion.a>
-                <div className="thumbnail-overlay-glow"></div>
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src={`https://www.youtube.com/embed/${getEmbedId(video.videoUrl)}`}
+                  title={video.title}
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  className="video-iframe"
+                  loading="lazy"
+                ></iframe>
               </div>
               <div className="video-info">
                 <h3>{video.title}</h3>

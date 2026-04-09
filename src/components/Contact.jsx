@@ -54,7 +54,6 @@ const Contact = () => {
                 <a href="https://www.linkedin.com/in/mahi-patel-1663b8367/" className="social-link">LinkedIn</a>
                 <a href="https://x.com/MahiPatel019" className="social-link">Twitter</a>
                 <a href="https://www.youtube.com/@MahiPatel-x3u" className="social-link">Youtube</a>
-
               </div>
             </div>
           </div>
