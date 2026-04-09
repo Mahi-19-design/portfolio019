@@ -3,7 +3,7 @@ import '../styles/projects.css'
 const Projects = () => {
   const projects = [
     {
-      id: 1,
+      id: 6,
       title: 'Movie API',
       description: 'A movie discovery platform that allows users to search movies in real time using a public movie API and view detailed information including plot, rating, release year, and posters.',
       technologies: ['API Integration', 'HTML', 'CSS' , 'JavaScript'],
@@ -11,7 +11,7 @@ const Projects = () => {
       live: 'https://app.netlify.com/projects/m019/overview'
     },
     {
-      id: 2,
+      id: 5,
       title: 'React-Routing & API Project',
       description: 'A basic web application demonstrating API integration and client-side routing. The project fetches data from an external API and uses routing to navigate between multiple pages without reloading, showcasing core concepts of modern single-page applications.',
       technologies: ['CSS' , 'React'],
@@ -35,14 +35,14 @@ const Projects = () => {
       live: 'https://mahi-polkadotclone.netlify.app/'
     },
      {
-      id: 5,
+      id: 2,
       title: 'AI Resume Optimizer',
       description: 'Our Hackathon project inspired to build an AI resume optizimer through which the user can upload their resume and get it optimized by the AI.This helps the job seeker in building a good resume.It reduces the time taken to build a resume.  ',
       technologies: ["React" ,"Node.js" , "Express" , "MongoDB" , "Gemini API"],
       github: 'https://github.com/Mahi-19-design/IISC',
     },
      {
-      id: 6,
+      id: 1,
       title: 'CropSphere',
       description: 'CropSphere is an innovative agricultural platform designed to empower farmers with AI-driven insights and sustainable farming solutions. The application provides personalized crop recommendations, soil health analysis, and smart irrigation guidance to help farmers maximize yields while minimizing resource usage.',
       technologies: ["React" , "Node.js" , "Express" , "MongoDB" , "Gemini API"],
