@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+
+# Sitemaps
+Sitemap: https://portfolio019.vercel.app/sitemap.xml
