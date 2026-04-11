@@ -1,22 +1,54 @@
 import { useState, useEffect } from 'react'
+import { Routes, Route, useLocation, useNavigate } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Starfield from './components/Starfield'
-import Hero from './components/Hero'
-import About from './components/About'
-import Skills from './components/Skills'
-import Projects from './components/Projects'
-import Certifications from './components/Certifications'
-import Hackathons from './components/Hackathons'
-import YouTube from './components/YouTube'
-import Contact from './components/Contact'
 import Footer from './components/Footer'
+import Home from './pages/Home'
+import LeetCode from './components/LeetCode'
 import './styles/global.css'
 
 function App() {
   const [activeSection, setActiveSection] = useState('hero')
+  const location = useLocation()
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    // Scroll management for path-based sections
+    const path = location.pathname.replace('/', '')
+    
+    if (path && path !== 'leetcode') {
+      const element = document.getElementById(path)
+      if (element) {
+        setTimeout(() => {
+          window.scrollTo({
+            top: element.offsetTop - 80,
+            behavior: 'smooth'
+          })
+        }, 100)
+      }
+    } else if (location.pathname === '/' && !location.hash) {
+      window.scrollTo(0, 0)
+    }
+    
+    // Legacy support for hashes if they still exist
+    if (location.hash) {
+      const id = location.hash.replace('#', '')
+      const element = document.getElementById(id)
+      if (element) {
+        setTimeout(() => {
+          window.scrollTo({
+            top: element.offsetTop - 80,
+            behavior: 'smooth'
+          })
+        }, 100)
+      }
+    }
+  }, [location.pathname, location.hash])
 
   useEffect(() => {
     const handleScroll = () => {
+      if (location.pathname === '/leetcode') return;
+
       const sections = ['hero', 'about', 'skills', 'projects', 'certifications', 'hackathons', 'youtube', 'contact']
       const scrollPosition = window.scrollY + 100
 
@@ -26,6 +58,12 @@ function App() {
           const { offsetTop, offsetHeight } = element
           if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
             setActiveSection(section)
+            
+            // Update URL path without adding to history to avoid cluttering back button
+            const newPath = section === 'hero' ? '/' : `/${section}`
+            if (window.location.pathname !== newPath) {
+              window.history.replaceState(null, null, newPath)
+            }
             break
           }
         }
@@ -37,7 +75,6 @@ function App() {
     
     const handleMouseMove = (e) => {
       if (cursor && cursorDot) {
-        // Fast DOM manipulation to bypass React render cycle
         cursor.style.left = `${e.clientX}px`;
         cursor.style.top = `${e.clientY}px`;
         cursorDot.style.left = `${e.clientX}px`;
@@ -59,7 +96,7 @@ function App() {
       window.removeEventListener('mousedown', handleMouseDown)
       window.removeEventListener('mouseup', handleMouseUp)
     }
-  }, [])
+  }, [location.pathname])
 
   return (
     <div className="app">
@@ -68,14 +105,17 @@ function App() {
       <Starfield />
       <Navbar activeSection={activeSection} />
       <main>
-        <Hero />
-        <About />
-        <Skills />
-        <Projects />
-        <Certifications />
-        <Hackathons />
-        <YouTube />
-        <Contact />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/leetcode" element={<LeetCode />} />
+          <Route path="/about" element={<Home />} />
+          <Route path="/skills" element={<Home />} />
+          <Route path="/projects" element={<Home />} />
+          <Route path="/certifications" element={<Home />} />
+          <Route path="/hackathons" element={<Home />} />
+          <Route path="/youtube" element={<Home />} />
+          <Route path="/contact" element={<Home />} />
+        </Routes>
       </main>
       <Footer />
     </div>
@@ -83,3 +123,5 @@ function App() {
 }
 
 export default App
+
+

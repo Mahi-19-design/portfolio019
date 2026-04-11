@@ -1,5 +1,8 @@
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 import '../styles/youtube.css'
+
+const MotionLink = motion(Link);
 
 const videos = [
   {
@@ -49,12 +52,12 @@ const videos = [
   },
   {
     id: 6,
-    title: 'Bitcoin Official Website Clone',
-    description: 'A frontend clone inspired by the Bitcoin Official Website interface, practicing modern web development.',
-    thumbnail: 'https://img.youtube.com/vi/MQOqYDDhzBI/maxresdefault.jpg',
-    videoUrl: 'https://www.youtube.com/watch?v=MQOqYDDhzBI',
-    sourceCode: 'https://github.com/Mahi-19-design/Cloned-projects/tree/main/Bitcoin-magzine',
-    tags: ['CSS', 'HTML']
+    title: 'Modern Web Architecture',
+    description: 'Discussions on modern application architectures and building scalable web products with industry standards.',
+    thumbnail: 'https://img.youtube.com/vi/H_LgC5iS8E0/maxresdefault.jpg',
+    videoUrl: 'https://www.youtube.com/watch?v=H_LgC5iS8E0',
+    sourceCode: 'https://github.com/Mahi-19-design',
+    tags: ['Architecture', 'Web Design']
   }
 ]
 const getEmbedId = (url) => {
@@ -122,8 +125,8 @@ const YouTube = () => {
                 <h3>{video.title}</h3>
                 <p className="video-description">{video.description}</p>
                 <div className="video-links">
-                  <motion.a 
-                    href={video.videoUrl} 
+                  <MotionLink 
+                    to={video.videoUrl} 
                     target="_blank" 
                     rel="noopener noreferrer" 
                     className="video-link-btn icon-btn"
@@ -131,9 +134,9 @@ const YouTube = () => {
                     whileTap={{ scale: 0.95 }}
                   >
                      📺 Watch
-                  </motion.a>
-                  <motion.a 
-                    href={video.sourceCode} 
+                  </MotionLink>
+                  <MotionLink 
+                    to={video.sourceCode} 
                     target="_blank" 
                     rel="noopener noreferrer" 
                     className="source-link-btn icon-btn"
@@ -141,7 +144,7 @@ const YouTube = () => {
                     whileTap={{ scale: 0.95 }}
                   >
                      {"</>"} Code
-                  </motion.a>
+                  </MotionLink>
                 </div>
               </div>
             </motion.div>
@@ -154,19 +157,20 @@ const YouTube = () => {
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.8 }}
         >
-          <motion.a 
-            href="https://www.youtube.com/@MahiPatel-x3u" 
+          <MotionLink 
+            to="https://www.youtube.com/@MahiPatel-x3u" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="btn btn-youtube"
             whileHover={{ scale: 1.1, boxShadow: "0 0 25px rgba(0, 242, 254, 0.5)" }}
           >
              Visit My Channel
-          </motion.a>
+          </MotionLink>
         </motion.div>
       </div>
     </section>
   )
 }
+
 
 export default YouTube

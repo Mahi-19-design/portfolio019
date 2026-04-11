@@ -1,5 +1,6 @@
 import { TypeAnimation } from 'react-type-animation'
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 import '../styles/hero.css'
 
 const Hero = () => {
@@ -57,13 +58,16 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.8 }}
           >
-            <a href="#projects" className="btn">
+            <Link to="/projects" className="btn">
               View Projects
-            </a>
-            <a href="#contact" className="btn btn-outline">
+            </Link>
+            <Link to="/contact" className="btn btn-outline">
               Get In Touch
-            </a>
+            </Link>
           </motion.div>
+
+
+
         </motion.div>
 
         <motion.div 

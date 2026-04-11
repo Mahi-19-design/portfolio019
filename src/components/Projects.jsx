@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import '../styles/projects.css'
 
 const Projects = () => {
@@ -71,14 +72,14 @@ const Projects = () => {
                 ))}
               </div>
               <div className="project-links">
-                <a href={project.github} className="project-link">
+                <Link to={project.github} target="_blank" rel="noopener noreferrer" className="project-link">
                   <span className="link-icon">{"</>"}</span>
                   Code
-                </a>
-                <a href={project.live} className="project-link">
+                </Link>
+                <Link to={project.live} target="_blank" rel="noopener noreferrer" className="project-link">
                   <span className="link-icon">🚀</span>
                   Live Demo
-                </a>
+                </Link>
               </div>
             </div>
           ))}
@@ -89,3 +90,4 @@ const Projects = () => {
 }
 
 export default Projects
+

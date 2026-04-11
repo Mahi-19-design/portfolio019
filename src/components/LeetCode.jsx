@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import '../styles/leetcode.css'
 
 const LeetCode = () => {
@@ -136,9 +137,9 @@ const LeetCode = () => {
                         </div>
 
                         <div className="lc-footer">
-                            <a href={`https://leetcode.com/${username}`} target="_blank" rel="noopener noreferrer" className="lc-btn">
+                            <Link to={`https://leetcode.com/${username}`} target="_blank" rel="noopener noreferrer" className="lc-btn">
                                 <span>🚀</span> View Full Profile
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </motion.div>

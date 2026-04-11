@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 import '../styles/hackathons.css'
 
 const hackathonsData = [
@@ -98,9 +99,9 @@ const Hackathons = () => {
               </div>
 
               <div className="hack-actions">
-                <a href={hack.github} target="_blank" rel="noopener noreferrer" className="hack-btn hack-btn-primary">
+                <Link to={hack.github} target="_blank" rel="noopener noreferrer" className="hack-btn hack-btn-primary">
                    View Code
-                </a>
+                </Link>
               </div>
             </div>
           </motion.div>

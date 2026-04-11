@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import '../styles/contact.css'
 
 const Contact = () => {
@@ -50,10 +51,10 @@ const Contact = () => {
                 </div>
               </div>
               <div className="social-links">
-                <a href="https://github.com/Mahi-19-design" className="social-link">GitHub</a>
-                <a href="https://www.linkedin.com/in/mahi-patel-1663b8367/" className="social-link">LinkedIn</a>
-                <a href="https://x.com/MahiPatel019" className="social-link">Twitter</a>
-                <a href="https://www.youtube.com/@MahiPatel-x3u" className="social-link">Youtube</a>
+                <Link to="https://github.com/Mahi-19-design" target="_blank" rel="noopener noreferrer" className="social-link">GitHub</Link>
+                <Link to="https://www.linkedin.com/in/mahi-patel-1663b8367/" target="_blank" rel="noopener noreferrer" className="social-link">LinkedIn</Link>
+                <Link to="https://x.com/MahiPatel019" target="_blank" rel="noopener noreferrer" className="social-link">Twitter</Link>
+                <Link to="https://www.youtube.com/@MahiPatel-x3u" target="_blank" rel="noopener noreferrer" className="social-link">Youtube</Link>
               </div>
             </div>
           </div>
