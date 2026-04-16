@@ -21,12 +21,12 @@ const Home = ({ onResumeClick }) => {
       <Hero onResumeClick={onResumeClick} />
       <About />
       <Skills />
-      <Achievements />
       <Projects />
+      <Achievements />
+      <Hackathons />
+      <Certifications />
       <YouTube />
       <FigmaDesigns />
-      <Certifications />
-      <Hackathons />
       <Contact />
     </>
   )
