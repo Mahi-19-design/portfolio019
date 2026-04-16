@@ -31,6 +31,36 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://portfolio019.vercel.app/achievements</loc>
+    <lastmod>2026-04-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://portfolio019.vercel.app/figma</loc>
+    <lastmod>2026-04-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://portfolio019.vercel.app/certifications</loc>
+    <lastmod>2026-04-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://portfolio019.vercel.app/hackathons</loc>
+    <lastmod>2026-04-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://portfolio019.vercel.app/youtube</loc>
+    <lastmod>2026-04-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://portfolio019.vercel.app/contact</loc>
     <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>

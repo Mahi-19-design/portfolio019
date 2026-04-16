@@ -1,7 +1,7 @@
-
 import { motion } from 'framer-motion'
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet'
 import '../styles/leetcode.css'
 
 const LeetCode = () => {
@@ -53,6 +53,11 @@ const LeetCode = () => {
 
     return (
         <section id="leetcode" className="leetcode-section">
+            <Helmet>
+                <title>Mahi Patel | LeetCode Statistics & Problem Solving</title>
+                <meta name="description" content="View real-time LeetCode statistics for Mahi Patel. Track problem-solving progress across Easy, Medium, and Hard categories." />
+                <meta name="keywords" content="LeetCode stats, Mahi Patel LeetCode, competitive programming, problem solving progress" />
+            </Helmet>
             <div className="container">
                 <motion.div 
                     className="leetcode-container"

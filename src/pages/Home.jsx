@@ -14,8 +14,9 @@ const Home = ({ onResumeClick }) => {
   return (
     <>
     <Helmet>
-      <title>Home</title>
-      <meta name="description" content="Home" />
+      <title>Mahi Patel | Full Stack Developer & AI Enthusiast</title>
+      <meta name="description" content="Explore the portfolio of Mahi Patel, a passionate Full Stack Developer and AI Enthusiast. Discover projects in Web Development, Machine Learning, and UI/UX design." />
+      <meta name="keywords" content="Mahi Patel, Portfolio, Full Stack Developer, AI Enthusiast, React Developer, Node.js, Computer Engineering" />
     </Helmet>
       <Hero onResumeClick={onResumeClick} />
       <About />
