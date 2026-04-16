@@ -17,10 +17,10 @@ const hackathonsData = [
     tags: ['React', 'Gemini API', 'Node.js', 'Prototyping' , 'Express' , 'MongoDB' ],
     icon: '🚀',
     github: 'https://github.com/Mahi-19-design/IISC',
-    image: 'https://res.cloudinary.com/dy5jgthmt/image/upload/q_auto/f_auto/v1775722902/Screenshot_2026-04-09_134957_pt9zle.png',
+    image: 'https://res.cloudinary.com/dy5jgthmt/image/upload/q_auto,f_auto,w_800/v1775722902/Screenshot_2026-04-09_134957_pt9zle.png',
     gallery: [
-      'https://res.cloudinary.com/dy5jgthmt/image/upload/v1775721803/WhatsApp_Image_2026-04-08_at_1.55.52_PM_b52jlv.jpg',
-      'https://res.cloudinary.com/dy5jgthmt/image/upload/q_auto/f_auto/v1775735349/quiz_yr77xo.jpg'
+      'https://res.cloudinary.com/dy5jgthmt/image/upload/q_auto,f_auto,w_800/v1775721803/WhatsApp_Image_2026-04-08_at_1.55.52_PM_b52jlv.jpg',
+      'https://res.cloudinary.com/dy5jgthmt/image/upload/q_auto,f_auto,w_800/v1775735349/quiz_yr77xo.jpg'
     ]
   },
   {
@@ -36,14 +36,14 @@ const hackathonsData = [
     tags: ['UI/UX', 'Figma', 'React', 'Agri-Tech' , 'Node.js' , 'MongoDB' , 'Express' , 'Gemini API'],
     icon: '💡',
     github: 'https://github.com/Mahi-19-design/CropSphere',
-    image: 'https://res.cloudinary.com/dy5jgthmt/image/upload/v1775722921/Screenshot_2026-04-09_135047_it2wyn.png',
+    image: 'https://res.cloudinary.com/dy5jgthmt/image/upload/q_auto,f_auto,w_800/v1775722921/Screenshot_2026-04-09_135047_it2wyn.png',
     gallery: [
-      'https://res.cloudinary.com/dy5jgthmt/image/upload/q_auto/f_auto/v1776361708/Screenshot_2026-04-16_231806_molr6q.png',
-      'https://res.cloudinary.com/dy5jgthmt/image/upload/q_auto/f_auto/v1776361709/733f9e94-3a86-47fa-8c32-659152762981_l5uaou.jpg',
-      'https://res.cloudinary.com/dy5jgthmt/image/upload/q_auto/f_auto/v1776361709/f163bfd7-d1c8-4687-aafd-18dbbaf4adf6_fd76c4.jpg',
-      'https://res.cloudinary.com/dy5jgthmt/image/upload/q_auto/f_auto/v1776361709/d6e4bbad-e19a-40ae-9110-6a3168b243c7_kstgm5.jpg',
-      'https://res.cloudinary.com/dy5jgthmt/image/upload/q_auto/f_auto/v1776361708/Screenshot_2026-04-16_231752_i1uvjg.png',
-      'https://res.cloudinary.com/dy5jgthmt/image/upload/q_auto/f_auto/v1776361708/Screenshot_2026-04-16_231800_todnog.png'
+      'https://res.cloudinary.com/dy5jgthmt/image/upload/q_auto,f_auto,w_600/v1776361708/Screenshot_2026-04-16_231806_molr6q.png',
+      'https://res.cloudinary.com/dy5jgthmt/image/upload/q_auto,f_auto,w_600/v1776361709/733f9e94-3a86-47fa-8c32-659152762981_l5uaou.jpg',
+      'https://res.cloudinary.com/dy5jgthmt/image/upload/q_auto,f_auto,w_600/v1776361709/f163bfd7-d1c8-4687-aafd-18dbbaf4adf6_fd76c4.jpg',
+      'https://res.cloudinary.com/dy5jgthmt/image/upload/q_auto,f_auto,w_600/v1776361709/d6e4bbad-e19a-40ae-9110-6a3168b243c7_kstgm5.jpg',
+      'https://res.cloudinary.com/dy5jgthmt/image/upload/q_auto,f_auto,w_600/v1776361708/Screenshot_2026-04-16_231752_i1uvjg.png',
+      'https://res.cloudinary.com/dy5jgthmt/image/upload/q_auto,f_auto,w_600/v1776361708/Screenshot_2026-04-16_231800_todnog.png'
     ]
   },
   {
@@ -59,11 +59,11 @@ const hackathonsData = [
     tags: ['UI/UX', 'Figma', 'React', 'Agri-Tech' , 'Node.js' , 'MongoDB' , 'Express' , 'Gemini API'],
     icon: '💡',
     github: 'https://github.com/Mahi-19-design/CropSphere',
-    image: 'https://res.cloudinary.com/dy5jgthmt/image/upload/v1775722921/Screenshot_2026-04-09_135047_it2wyn.png',
+    image: 'https://res.cloudinary.com/dy5jgthmt/image/upload/q_auto,f_auto,w_800/v1775722921/Screenshot_2026-04-09_135047_it2wyn.png',
     gallery: [
-      'https://res.cloudinary.com/dy5jgthmt/image/upload/q_auto/f_auto/v1776362005/a6c0dd04-bb3b-4e65-a7af-2643aecb80c3_neukug.jpg',
-      'https://res.cloudinary.com/dy5jgthmt/image/upload/q_auto/f_auto/v1776362005/3a6a145d-6d3e-4b58-8df1-f14019b56ac6_u1hhg5.jpg',
-      'https://res.cloudinary.com/dy5jgthmt/image/upload/q_auto/f_auto/v1776362005/31deb417-b57a-4e15-bc33-c34b94e1083f_cwtzbc.jpg'
+      'https://res.cloudinary.com/dy5jgthmt/image/upload/q_auto,f_auto,w_600/v1776362005/a6c0dd04-bb3b-4e65-a7af-2643aecb80c3_neukug.jpg',
+      'https://res.cloudinary.com/dy5jgthmt/image/upload/q_auto,f_auto,w_600/v1776362005/3a6a145d-6d3e-4b58-8df1-f14019b56ac6_u1hhg5.jpg',
+      'https://res.cloudinary.com/dy5jgthmt/image/upload/q_auto,f_auto,w_600/v1776362005/31deb417-b57a-4e15-bc33-c34b94e1083f_cwtzbc.jpg'
     ]
   }
 ]
@@ -98,7 +98,7 @@ const Hackathons = () => {
               style={{ cursor: 'pointer' }}
             >
               <div className="hack-image-container">
-                <img src={hack.image} alt={hack.title} className="hack-image" />
+                <img src={hack.image} alt={hack.title} className="hack-image" loading="lazy" />
                 <div className="hack-overlay"></div>
                 <div className="hack-badge">{hack.achievement}</div>
               </div>
@@ -144,7 +144,7 @@ const Hackathons = () => {
               exit={{ opacity: 0, scale: 0.9, y: 20 }}
               onClick={(e) => e.stopPropagation()}
             >
-              <button className="close-modal" onClick={() => setSelectedHack(null)}>&times;</button>
+              <button className="close-modal" onClick={() => setSelectedHack(null)} aria-label="Close modal">&times;</button>
               
               <div className="modal-scroll-node">
                 <div className="hack-modal-banner">
@@ -182,8 +182,8 @@ const Hackathons = () => {
                         <h4><span>📸</span> Competition Gallery</h4>
                         <div className="hack-modal-gallery">
                           {selectedHack.gallery.map((photo, i) => (
-                            <div key={i} className="gallery-img-wrapper" onClick={() => window.open(photo, '_blank')}>
-                              <img src={photo} alt="Event moment" />
+                            <div key={i} className="gallery-img-wrapper" onClick={() => window.open(photo, '_blank')} role="button" aria-label="View full image">
+                              <img src={photo} alt="Event moment" loading="lazy" />
                             </div>
                           ))}
                         </div>

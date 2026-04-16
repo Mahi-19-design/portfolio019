@@ -61,12 +61,10 @@ const Hero = ({ onResumeClick }) => {
             <Link to="/projects" className="btn">
               View Projects
             </Link>
-            <button onClick={onResumeClick} className="btn btn-outline resume-btn">
+            <button onClick={onResumeClick} className="btn btn-outline resume-btn" aria-label="View Resume PDF">
               View Resume
             </button>
           </motion.div>
-
-
 
         </motion.div>
 
@@ -79,9 +77,11 @@ const Hero = ({ onResumeClick }) => {
           <div className="image-container">
             <div className="image-placeholder">
               <img 
-                src="https://res.cloudinary.com/dq7hb3fah/image/upload/v1770271507/Screenshot_2026-02-05_113444_tzdbof.png" 
-                alt="Mahi Patel" 
-                className="profile-image" 
+                src="https://res.cloudinary.com/dq7hb3fah/image/upload/q_auto,f_auto,w_800/v1770271507/Screenshot_2026-02-05_113444_tzdbof.png" 
+                alt="Mahi Patel - Full Stack Developer" 
+                className="profile-image"
+                loading="eager"
+                fetchpriority="high"
               />
             </div>
             <div className="image-frame"></div>
