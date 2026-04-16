@@ -109,6 +109,9 @@ const Skills = () => {
                       src={skill.icon} 
                       alt={skill.name} 
                       className="skill-img"
+                      style={{ 
+                        filter: (skill.name === 'Express' || skill.name === 'GitHub') ? 'brightness(0) invert(1)' : 'none' 
+                      }}
                       whileHover={{ scale: 1.2, rotate: -5 }}
                     />
                   </div>

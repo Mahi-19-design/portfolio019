@@ -18,8 +18,12 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    // In a real app, you would connect to a backend here
-    alert('Thank you for your message! I\'ll get back to you soon.')
+    // To use EmailJS:
+    // 1. npm install @emailjs/browser
+    // 2. import emailjs from '@emailjs/browser'
+    // 3. emailjs.sendForm('SERVICE_ID', 'TEMPLATE_ID', e.target, 'PUBLIC_KEY')
+    
+    alert('Thank you for your message! EmailJS integration is ready. Just add your keys!')
     setFormData({ name: '', email: '', message: '' })
   }
 
@@ -51,6 +55,7 @@ const Contact = () => {
                 </div>
               </div>
               <div className="social-links">
+                <Link to="https://leetcode.com/mahipatel019" target="_blank" rel="noopener noreferrer" className="social-link">LeetCode</Link>
                 <Link to="https://github.com/Mahi-19-design" target="_blank" rel="noopener noreferrer" className="social-link">GitHub</Link>
                 <Link to="https://www.linkedin.com/in/mahi-patel-1663b8367/" target="_blank" rel="noopener noreferrer" className="social-link">LinkedIn</Link>
                 <Link to="https://x.com/MahiPatel019" target="_blank" rel="noopener noreferrer" className="social-link">Twitter</Link>

@@ -5,12 +5,21 @@ import Starfield from './components/Starfield'
 import Footer from './components/Footer'
 import Home from './pages/Home'
 import LeetCode from './components/LeetCode'
+import ResumeModal from './components/ResumeModal'
 import './styles/global.css'
 
 function App() {
   const [activeSection, setActiveSection] = useState('hero')
+  const [isResumeOpen, setIsResumeOpen] = useState(false)
   const location = useLocation()
   const navigate = useNavigate()
+
+  const openResume = (e) => {
+    if (e) e.preventDefault()
+    setIsResumeOpen(true)
+  }
+
+  const closeResume = () => setIsResumeOpen(false)
 
   useEffect(() => {
     // Scroll management for path-based sections
@@ -49,7 +58,7 @@ function App() {
     const handleScroll = () => {
       if (location.pathname === '/leetcode') return;
 
-      const sections = ['hero', 'about', 'skills', 'projects', 'certifications', 'hackathons', 'youtube', 'contact']
+      const sections = ['hero', 'about', 'skills', 'achievements', 'projects', 'youtube', 'figma', 'certifications', 'hackathons', 'contact']
       const scrollPosition = window.scrollY + 100
 
       for (const section of sections) {
@@ -103,21 +112,22 @@ function App() {
       <div className="custom-cursor"></div>
       <div className="custom-cursor-dot"></div>
       <Starfield theme="cyan" isDarkMode={true} />
-      <Navbar activeSection={activeSection} />
+      <Navbar activeSection={activeSection} onResumeClick={openResume} />
       <main>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home onResumeClick={openResume} />} />
           <Route path="/leetcode" element={<LeetCode />} />
-          <Route path="/about" element={<Home />} />
-          <Route path="/skills" element={<Home />} />
-          <Route path="/projects" element={<Home />} />
-          <Route path="/certifications" element={<Home />} />
-          <Route path="/hackathons" element={<Home />} />
-          <Route path="/youtube" element={<Home />} />
-          <Route path="/contact" element={<Home />} />
+          <Route path="/about" element={<Home onResumeClick={openResume} />} />
+          <Route path="/skills" element={<Home onResumeClick={openResume} />} />
+          <Route path="/projects" element={<Home onResumeClick={openResume} />} />
+          <Route path="/certifications" element={<Home onResumeClick={openResume} />} />
+          <Route path="/hackathons" element={<Home onResumeClick={openResume} />} />
+          <Route path="/youtube" element={<Home onResumeClick={openResume} />} />
+          <Route path="/contact" element={<Home onResumeClick={openResume} />} />
         </Routes>
       </main>
       <Footer />
+      <ResumeModal isOpen={isResumeOpen} onClose={closeResume} />
     </div>
   )
 }

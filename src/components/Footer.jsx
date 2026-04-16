@@ -25,6 +25,7 @@ const Footer = () => {
             </div>
             <div className="link-group">
               <h4>Connect</h4>
+              <Link to="https://leetcode.com/mahipatel019" target="_blank" rel="noopener noreferrer">LeetCode</Link>
               <Link to="https://github.com/Mahi-19-design" target="_blank" rel="noopener noreferrer">GitHub</Link>
               <Link to="https://www.linkedin.com/in/mahi-patel-1663b8367/" target="_blank" rel="noopener noreferrer">LinkedIn</Link>
               <Link to="https://x.com/MahiPatel019" target="_blank" rel="noopener noreferrer">Twitter</Link>

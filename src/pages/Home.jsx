@@ -7,21 +7,25 @@ import Certifications from '../components/Certifications'
 import Hackathons from '../components/Hackathons'
 import YouTube from '../components/YouTube'
 import Contact from '../components/Contact'
+import Achievements from '../components/Achievements'
+import FigmaDesigns from '../components/FigmaDesigns'
 
-const Home = () => {
+const Home = ({ onResumeClick }) => {
   return (
     <>
     <Helmet>
       <title>Home</title>
       <meta name="description" content="Home" />
     </Helmet>
-      <Hero />
+      <Hero onResumeClick={onResumeClick} />
       <About />
       <Skills />
+      <Achievements />
       <Projects />
+      <YouTube />
+      <FigmaDesigns />
       <Certifications />
       <Hackathons />
-      <YouTube />
       <Contact />
     </>
   )

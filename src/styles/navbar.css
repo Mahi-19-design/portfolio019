@@ -22,7 +22,7 @@
 .navbar-container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -31,12 +31,13 @@
 .navbar-logo {
   text-decoration: none;
   font-size: 2rem;
+  flex-shrink: 0;
 }
 
 .nav-menu {
   display: flex;
   list-style: none;
-  gap: 3rem;
+  gap: 1.5rem;
   margin: 0;
   padding: 0;
 }
@@ -49,7 +50,7 @@
   color: var(--text-secondary);
   text-decoration: none;
   font-weight: 500;
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   padding: 8px 0;
   position: relative;
   transition: all 0.3s ease;
@@ -115,8 +116,8 @@
   color: var(--accent-primary);
 }
 
-/* Mobile Navigation */
-@media (max-width: 768px) {
+/* Mobile Navigation - Triggered early for many items */
+@media (max-width: 1250px) {
   .menu-toggle {
     display: block;
     z-index: 1001;
@@ -200,11 +201,13 @@
 .resume-link {
   color: var(--accent-primary) !important;
   font-weight: 700 !important;
-  border: 1px solid rgba(0, 242, 254, 0.3);
-  padding: 6px 15px !important;
+  border: 1px solid rgba(0, 242, 254, 0.3) !important;
+  padding: 8px 20px !important;
   border-radius: 8px;
-  background: rgba(0, 242, 254, 0.05);
+  background: rgba(0, 242, 254, 0.05) !important;
   transition: all 0.3s ease !important;
+  cursor: pointer;
+  font-family: inherit;
 }
 
 .resume-link:hover {
@@ -213,7 +216,7 @@
   transform: translateY(-2px);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1250px) {
   .resume-link {
     margin: 10px 20px;
     display: inline-block !important;
@@ -238,7 +241,7 @@
   gap: 1.5rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1250px) {
   .nav-actions {
     gap: 0.8rem;
   }

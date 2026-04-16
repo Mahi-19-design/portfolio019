@@ -265,7 +265,245 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.hack-btn:hover {
-  transform: translateY(-2px);
-  filter: brightness(1.1);
+.hack-card-premium {
+  /* existing styles */
+  cursor: pointer;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.hack-actions-preview {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.view-details-txt {
+  color: var(--accent-primary);
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.hack-card-premium:hover .view-details-txt {
+  letter-spacing: 0.5px;
+  text-shadow: 0 0 10px rgba(0, 242, 254, 0.5);
+}
+
+/* Modal Styling */
+.hack-modal {
+  width: 95%;
+  max-width: 850px;
+  height: 90vh;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 32px;
+  background: #080a12;
+  border: 1px solid rgba(0, 242, 254, 0.2);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
+}
+
+.modal-scroll-node {
+  height: 100%;
+  overflow-y: auto;
+  padding-bottom: 40px;
+}
+
+.hack-modal-banner {
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hack-modal-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hack-modal-badge {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  background: var(--accent-primary);
+  color: #000;
+  padding: 8px 18px;
+  border-radius: 50px;
+  font-weight: 800;
+  font-size: 0.85rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.hack-modal-content {
+  padding: 3rem;
+}
+
+.hack-modal-header {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.hack-icon-large {
+  width: 80px;
+  height: 80px;
+  background: rgba(0, 242, 254, 0.1);
+  border: 1px solid rgba(0, 242, 254, 0.2);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+}
+
+.hack-title-block h2 {
+  font-size: 2.2rem;
+  background: linear-gradient(135deg, #fff, var(--accent-primary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hack-organizer {
+  color: #8fa0b5;
+  font-size: 1rem;
+  margin-top: 5px;
+}
+
+.hack-section-block {
+  margin-bottom: 3rem;
+}
+
+.hack-section-block h4 {
+  color: #fff;
+  font-size: 1.1rem;
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hack-section-block p {
+  color: #a0aec0;
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+.project-highlight {
+  padding: 2rem;
+  background: rgba(0, 242, 254, 0.03);
+  border: 1px dashed rgba(0, 242, 254, 0.2);
+  border-radius: 20px;
+}
+
+.hack-modal-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 15px;
+}
+
+.gallery-img-wrapper {
+  height: 130px;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.gallery-img-wrapper:hover {
+  transform: scale(1.05);
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.3);
+}
+
+.gallery-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hack-modal-footer {
+  margin-top: 2rem;
+}
+
+.hack-modal-footer .btn {
+  width: 100%;
+  padding: 18px;
+  border-radius: 14px;
+}
+
+@media (max-width: 768px) {
+  .hack-modal-content {
+    padding: 2rem 1.5rem;
+  }
+  .hack-modal-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+  .hack-title-block h2 {
+    font-size: 1.6rem;
+  }
+  .hack-modal-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.hack-gallery-section {
+  margin-top: 20px;
+}
+
+.hack-gallery-section h4 {
+  font-size: 0.9rem;
+  color: #fff;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hack-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.hack-gallery-item {
+  height: 120px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.hack-gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.hack-gallery-item:hover {
+  transform: scale(1.05);
+  border-color: var(--accent-primary);
+}
+
+.hack-gallery-item:hover img {
+  transform: scale(1.15);
+}
+
+@media (max-width: 480px) {
+  .hack-gallery-grid {
+    grid-template-columns: 1fr;
+  }
+  .hack-gallery-item {
+    height: 160px;
+  }
 }

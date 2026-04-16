@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import '../styles/navbar.css'
 
-const Navbar = ({ activeSection }) => {
+const Navbar = ({ activeSection, onResumeClick }) => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const location = useLocation()
@@ -12,10 +12,12 @@ const Navbar = ({ activeSection }) => {
     { id: 'hero', label: 'Home', path: '/' },
     { id: 'about', label: 'About', path: '/about' },
     { id: 'skills', label: 'Skills', path: '/skills' },
+    { id: 'achievements', label: 'Achievements', path: '/achievements' },
     { id: 'projects', label: 'Projects', path: '/projects' },
+    { id: 'youtube', label: 'YouTube', path: '/youtube' },
+    { id: 'figma', label: 'Figma', path: '/figma' },
     { id: 'certifications', label: 'Certifications', path: '/certifications' },
     { id: 'hackathons', label: 'Hackathons', path: '/hackathons' },
-    { id: 'youtube', label: 'YouTube', path: '/youtube' },
     { id: 'leetcode', label: 'LeetCode', path: '/leetcode' },
     { id: 'contact', label: 'Contact', path: '/contact' },
   ]
@@ -80,9 +82,15 @@ const Navbar = ({ activeSection }) => {
             </li>
           ))}
           <li key="resume" className="nav-item">
-            <a href="/Mahi_Patel_Resume.pdf" download="Mahi_Patel_Resume.pdf" className="nav-link resume-link">
+            <button 
+              onClick={(e) => {
+                setIsMenuOpen(false);
+                onResumeClick(e);
+              }} 
+              className="nav-link resume-link"
+            >
               Resume
-            </a>
+            </button>
           </li>
         </ul>
       </div>
