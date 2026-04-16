@@ -4,17 +4,17 @@ import '../styles/figma.css'
 const designs = [
   {
     id: 1,
-    title: 'CropSphere Agricultural Dashboard',
-    image: 'https://res.cloudinary.com/dq7hb3fah/image/upload/v1770271507/Screenshot_2026-02-05_113444_tzdbof.png',
-    link: 'https://www.figma.com/design/your-figma-link-1',
-    description: 'A comprehensive dashboard design for farmers to monitor soil health and crop progress.'
+    title: 'Streaming Platform UI Design',
+    image: 'https://res.cloudinary.com/dy5jgthmt/image/upload/q_auto/f_auto/v1776362956/Screenshot_2026-04-16_233828_xl9hme.png',
+    link: 'https://www.figma.com/design/0DOsKlgOM9gjZfjJigScIo/Untitled?node-id=409-427&t=0yP3hCCBpIZvtU0z-1',
+    description: 'A modern OTT-style interface inspired by platforms like Netflix, focused on seamless browsing, engaging visuals, and intuitive user experience.'
   },
   {
     id: 2,
     title: 'Portfolio Modern UI Concept',
-    image: 'https://res.cloudinary.com/dy5jgthmt/image/upload/v1775721803/WhatsApp_Image_2026-04-08_at_1.55.52_PM_b52jlv.jpg',
-    link: 'https://www.figma.com/design/your-figma-link-2',
-    description: 'Sleek, dark-themed portfolio design with glassmorphism elements.'
+    image: 'https://res.cloudinary.com/dy5jgthmt/image/upload/v1776363166/Screenshot_2026-04-16_234229_xbkf4a.png',
+    link: 'https://www.figma.com/design/0DOsKlgOM9gjZfjJigScIo/Untitled?node-id=411-428&t=0yP3hCCBpIZvtU0z-1',
+    description: 'https://res.cloudinary.com/dy5jgthmt/image/upload/v1776363166/Screenshot_2026-04-16_234229_xbkf4a.png'
   }
 ]
 
