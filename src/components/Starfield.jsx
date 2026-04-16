@@ -9,30 +9,23 @@ const Starfield = () => {
         const ctx = canvas.getContext('2d');
         let animationFrameId;
 
-        // Track mouse position with smooth easing
-        let targetX = window.innerWidth / 2;
-        let targetY = window.innerHeight / 2;
-        let mouseX = targetX;
-        let mouseY = targetY;
+        const getHue = (t) => {
+            if (t === 'purple') return 280;
+            if (t === 'gold') return 45;
+            return 195; // Default Cyan
+        }
 
         const resizeCanvas = () => {
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
-            targetX = canvas.width / 2;
-            targetY = canvas.height / 2;
         };
 
         window.addEventListener('resize', resizeCanvas);
         resizeCanvas();
 
-        const handleMouseMove = (e) => {
-            targetX = e.clientX;
-            targetY = e.clientY;
-        };
-        window.addEventListener('mousemove', handleMouseMove);
-
+        const numStars = 800;
         const stars = [];
-        const numStars = 800; // Increased star count
+        const baseHue = getHue('cyan');
 
         for (let i = 0; i < numStars; i++) {
             stars.push({
@@ -40,46 +33,34 @@ const Starfield = () => {
                 y: Math.random() * canvas.height * 2 - canvas.height,
                 z: Math.random() * canvas.width,
                 radius: Math.random() * 1.5 + 0.5,
-                color: `hsla(${Math.random() * 60 + 190}, 100%, 80%, ${Math.random() * 0.8 + 0.2})`
+                color: `hsla(${baseHue + (Math.random() * 40 - 20)}, 100%, 80%, ${Math.random() * 0.8 + 0.2})`
             });
         }
 
         const animate = () => {
-            // Make the canvas transparent but keep trails using destination-out
             ctx.globalCompositeOperation = 'destination-out';
             ctx.fillStyle = 'rgba(0, 0, 0, 0.3)';
             ctx.fillRect(0, 0, canvas.width, canvas.height);
-            ctx.globalCompositeOperation = 'lighter'; // source-over but makes stars glow
+            ctx.globalCompositeOperation = 'lighter';
 
             const cx = canvas.width / 2;
             const cy = canvas.height / 2;
 
-            // Smoothly ease mouse coordinates for parallax
-            mouseX += (targetX - mouseX) * 0.05;
-            mouseY += (targetY - mouseY) * 0.05;
-
-            const mx = (mouseX - cx) * 0.1;
-            const my = (mouseY - cy) * 0.1;
-
             stars.forEach(star => {
-                // Move stars towards viewport
-                star.z -= 2;
+                star.z -= 1.5;
 
-                // Reset star when it flies past user
                 if (star.z <= 0) {
                     star.z = canvas.width;
                     star.x = Math.random() * canvas.width * 2 - canvas.width;
                     star.y = Math.random() * canvas.height * 2 - canvas.height;
                 }
 
-                // 3D to 2D projection factoring in mouse parallax
                 const k = 120.0 / star.z;
-                const px = (star.x - mx) * k + cx;
-                const py = (star.y - my) * k + cy;
-
+                const px = star.x * k + cx;
+                const py = star.y * k + cy;
                 const radius = star.radius * k;
 
-                if (px >= 0 && px <= canvas.width && py >= 0 && py <= canvas.height && radius > 0) {
+                if (px >= 0 && px <= canvas.width && py >= 0 && py <= canvas.height) {
                     ctx.beginPath();
                     ctx.arc(px, py, radius, 0, Math.PI * 2);
                     ctx.fillStyle = star.color;
@@ -94,21 +75,20 @@ const Starfield = () => {
 
         return () => {
             window.removeEventListener('resize', resizeCanvas);
-            window.removeEventListener('mousemove', handleMouseMove);
             cancelAnimationFrame(animationFrameId);
         };
     }, []);
 
     return (
-        <div className="starfield-wrapper">
-            <div className="nebula-bg"></div>
-            
-            {/* Ambient shooting stars layer */}
-            <div className="shooting-star" style={{ top: '10%', left: '80%', animationDelay: '0s' }}></div>
-            <div className="shooting-star" style={{ top: '30%', left: '90%', animationDelay: '2s' }}></div>
-            <div className="shooting-star" style={{ top: '15%', left: '40%', animationDelay: '4s' }}></div>
-            <div className="shooting-star" style={{ top: '-10%', left: '60%', animationDelay: '6s' }}></div>
-            
+        <div className="starfield-wrapper visible" style={{
+            opacity: 1,
+            transition: 'opacity 0.8s ease-in-out',
+            pointerEvents: 'none'
+        }}>
+            <div className="nebula-bg" style={{
+                background: `radial-gradient(circle at center, var(--accent-glow) 0%, transparent 70%)`,
+                opacity: 0.2
+            }}></div>
             <canvas ref={canvasRef} className="starfield-canvas" />
         </div>
     );

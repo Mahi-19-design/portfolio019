@@ -61,9 +61,9 @@ const Hero = () => {
             <Link to="/projects" className="btn">
               View Projects
             </Link>
-            <Link to="/contact" className="btn btn-outline">
-              Get In Touch
-            </Link>
+            <a href="/Mahi_Patel_Resume.pdf" download="Mahi_Patel_Resume.pdf" className="btn btn-outline resume-btn">
+              Download CV
+            </a>
           </motion.div>
 
 

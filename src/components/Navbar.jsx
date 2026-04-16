@@ -32,14 +32,12 @@ const Navbar = ({ activeSection }) => {
   const handleClick = (e, item) => {
     setIsMenuOpen(false)
     
-    // Smooth scroll for home section paths
     if (item.path !== '/leetcode') {
       const sectionId = item.id === 'hero' ? 'hero' : item.id
       const element = document.getElementById(sectionId)
       
       if (element) {
         e.preventDefault()
-        // Update URL path manually to avoid full re-render jump if possible
         window.history.pushState(null, null, item.path)
         
         window.scrollTo({
@@ -58,16 +56,16 @@ const Navbar = ({ activeSection }) => {
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
         <Link to="/" className="navbar-logo" onClick={() => setIsMenuOpen(false)}>
-          <span className="logo-accent">&lt;</span>
-          MP
-          <span className="logo-accent">/&gt;</span>
+          <span className="logo-text">MP</span>
         </Link>
         
-        <button className={`menu-toggle ${isMenuOpen ? 'active' : ''}`} onClick={toggleMenu}>
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+        <div className="nav-actions">
+          <button className={`menu-toggle ${isMenuOpen ? 'active' : ''}`} onClick={toggleMenu}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
         
         <ul className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
           {navItems.map((item) => (
@@ -81,6 +79,11 @@ const Navbar = ({ activeSection }) => {
               </Link>
             </li>
           ))}
+          <li key="resume" className="nav-item">
+            <a href="/Mahi_Patel_Resume.pdf" download="Mahi_Patel_Resume.pdf" className="nav-link resume-link">
+              Resume
+            </a>
+          </li>
         </ul>
       </div>
     </nav>
@@ -88,5 +91,3 @@ const Navbar = ({ activeSection }) => {
 }
 
 export default Navbar
-
-

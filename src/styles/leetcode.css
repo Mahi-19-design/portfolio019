@@ -175,3 +175,93 @@
   transform: translateY(-3px);
   box-shadow: 0 15px 30px rgba(255, 161, 22, 0.4);
 }
+
+.lc-loading, .lc-error {
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.lc-spinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(255, 161, 22, 0.1);
+  border-top-color: #ffa116;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.lc-refresh-btn {
+  background: transparent;
+  border: 1px solid #ffa116;
+  color: #ffa116;
+  padding: 8px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.lc-refresh-btn:hover {
+  background: rgba(255, 161, 22, 0.1);
+}
+
+.lc-extra-stats {
+  display: flex;
+  justify-content: space-around;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.extra-stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.extra-stat-item .label {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.extra-stat-item .value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.extra-stat-separator {
+  width: 1px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.lc-tag {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 5px;
+    display: block;
+}
+
+.slash {
+    color: rgba(255, 255, 255, 0.2);
+    margin: 0 4px;
+}
+
+.leetcode-stats-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}

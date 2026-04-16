@@ -1,3 +1,4 @@
+import {Helmet} from 'react-helmet'
 import Hero from '../components/Hero'
 import About from '../components/About'
 import Skills from '../components/Skills'
@@ -10,6 +11,10 @@ import Contact from '../components/Contact'
 const Home = () => {
   return (
     <>
+    <Helmet>
+      <title>Home</title>
+      <meta name="description" content="Home" />
+    </Helmet>
       <Hero />
       <About />
       <Skills />

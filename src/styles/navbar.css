@@ -8,49 +8,29 @@
   -webkit-backdrop-filter: blur(24px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   z-index: 1000;
-  padding: 1.2rem 0;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  padding: 1.4rem 0;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .navbar.scrolled {
-  padding: 0.8rem 0;
+  padding: 1rem 0;
   background: rgba(3, 3, 5, 0.85);
   border-bottom: 1px solid rgba(0, 242, 254, 0.15);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
 }
 
 .navbar-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .navbar-logo {
-  font-size: 2rem;
-  font-weight: 800;
-  color: var(--text-primary);
   text-decoration: none;
-  transition: all 0.3s ease;
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  letter-spacing: -0.5px;
-}
-
-.navbar-logo:hover {
-  text-shadow: 0 0 15px rgba(0, 242, 254, 0.5);
-}
-
-.logo-accent {
-  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  transition: all 0.4s ease;
+  font-size: 2rem;
 }
 
 .nav-menu {
@@ -217,6 +197,30 @@
   }
 }
 
+.resume-link {
+  color: var(--accent-primary) !important;
+  font-weight: 700 !important;
+  border: 1px solid rgba(0, 242, 254, 0.3);
+  padding: 6px 15px !important;
+  border-radius: 8px;
+  background: rgba(0, 242, 254, 0.05);
+  transition: all 0.3s ease !important;
+}
+
+.resume-link:hover {
+  background: rgba(0, 242, 254, 0.15);
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.2);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .resume-link {
+    margin: 10px 20px;
+    display: inline-block !important;
+    text-align: center;
+  }
+}
+
 @media (max-width: 480px) {
   .navbar-logo {
     font-size: 1.3rem;
@@ -225,5 +229,17 @@
   .nav-menu {
     width: 250px;
     padding: 90px 20px 20px;
+  }
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .nav-actions {
+    gap: 0.8rem;
   }
 }

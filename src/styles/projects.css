@@ -126,46 +126,137 @@
   box-shadow: 0 5px 15px rgba(0, 242, 254, 0.2);
 }
 
-.project-links {
-  display: flex;
-  gap: 1rem;
+.view-details-btn {
+  margin-top: auto;
+  padding: 12px 20px;
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--accent-primary);
+  border: 1px solid rgba(0, 242, 254, 0.2);
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
   position: relative;
   z-index: 1;
-  margin-top: auto;
 }
 
-.project-link {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 10px 15px;
-  background: rgba(255, 255, 255, 0.03);
-  color: #fff;
-  text-decoration: none;
-  border-radius: 8px;
-  font-size: 0.9rem;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(5px);
-  white-space: nowrap;
-}
-
-.project-link:hover {
-  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-  color: #000;
-  border-color: transparent;
-  box-shadow: 0 5px 15px rgba(0, 242, 254, 0.3);
+.view-details-btn:hover {
+  background: rgba(0, 242, 254, 0.1);
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.2);
   transform: translateY(-2px);
 }
 
-.link-icon {
-  font-size: 1.1rem;
+/* Modal Styling */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(10px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
 }
 
-/* Responsive Design */
+.project-modal {
+  width: 100%;
+  max-width: 800px;
+  background: var(--bg-secondary);
+  position: relative;
+  padding: 0;
+  border: 1px solid rgba(0, 242, 254, 0.3);
+  overflow: hidden;
+}
+
+.close-modal {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 2.5rem;
+  color: #fff;
+  cursor: pointer;
+  z-index: 10;
+  line-height: 1;
+  opacity: 0.6;
+  transition: opacity 0.3s;
+}
+
+.close-modal:hover {
+  opacity: 1;
+  color: var(--accent-primary);
+}
+
+.modal-content {
+  padding: 3rem;
+}
+
+.modal-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(to right, #fff, var(--accent-primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.modal-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-bottom: 2rem;
+}
+
+.modal-description {
+  color: #a0aec0;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+}
+
+.modal-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.modal-links .btn {
+  flex: 1;
+  text-transform: none;
+  font-size: 1rem;
+}
+
+.modal-links .btn-outline {
+  background: transparent;
+  border: 1px solid var(--accent-primary);
+  color: var(--accent-primary);
+}
+
+.modal-links .btn-outline:hover {
+  background: rgba(0, 242, 254, 0.1);
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    padding: 2rem;
+  }
+  
+  .modal-content h2 {
+    font-size: 1.8rem;
+  }
+  
+  .modal-links {
+    flex-direction: column;
+  }
+}
+
+/* Responsive Design Overrides */
 @media (max-width: 1024px) {
   .projects-grid {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -177,45 +268,6 @@
   .projects-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
-  }
-  
-  .project-card {
-    padding: 1.8rem;
-  }
-
-  .project-header h3 {
-    font-size: 1.5rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .project-card {
-    padding: 1.5rem;
-  }
-
-  .project-description {
-    font-size: 0.95rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .project-technologies {
-    min-height: auto;
-    gap: 0.5rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .tech-tag {
-    padding: 4px 10px;
-    font-size: 0.8rem;
-  }
-
-  .project-links {
-    flex-direction: column;
-    gap: 0.8rem;
-  }
-
-  .project-link {
-    width: 100%;
   }
 }
 

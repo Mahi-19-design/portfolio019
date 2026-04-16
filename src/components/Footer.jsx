@@ -10,9 +10,7 @@ const Footer = () => {
         <div className="footer-content">
           <div className="footer-logo">
             <Link to="/" className="navbar-logo">
-              <span className="logo-accent">&lt;</span>
-              Mahi Patel
-              <span className="logo-accent">/&gt;</span>
+              <span className="logo-text">MP</span>
             </Link>
             <p>Building the future with AI and innovation</p>
           </div>

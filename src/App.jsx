@@ -99,10 +99,10 @@ function App() {
   }, [location.pathname])
 
   return (
-    <div className="app">
+    <div className="app theme-cyan mode-dark">
       <div className="custom-cursor"></div>
       <div className="custom-cursor-dot"></div>
-      <Starfield />
+      <Starfield theme="cyan" isDarkMode={true} />
       <Navbar activeSection={activeSection} />
       <main>
         <Routes>
