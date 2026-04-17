@@ -1,13 +1,21 @@
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import '../styles/contact.css'
 
 const Contact = () => {
+  const formRef = useRef();
+  const [isSending, setIsSending] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: ''
   })
+
+  useEffect(() => {
+    if (window.emailjs) {
+        window.emailjs.init("rFl_bLi102uICnCaE");
+    }
+  }, []);
 
   const handleChange = (e) => {
     setFormData({
@@ -18,13 +26,24 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    // To use EmailJS:
-    // 1. npm install @emailjs/browser
-    // 2. import emailjs from '@emailjs/browser'
-    // 3. emailjs.sendForm('SERVICE_ID', 'TEMPLATE_ID', e.target, 'PUBLIC_KEY')
-    
-    alert('Thank you for your message! EmailJS integration is ready. Just add your keys!')
-    setFormData({ name: '', email: '', message: '' })
+    if (isSending) return;
+    setIsSending(true);
+
+    const serviceId = 'service_5tboeqi';
+    const templateId = 'template_li3wc7q';
+    const publicKey = 'rFl_bLi102uICnCaE';
+
+    window.emailjs.sendForm(serviceId, templateId, formRef.current, publicKey)
+      .then(() => {
+          alert('Message sent successfully!');
+          setFormData({ name: '', email: '', message: '' });
+      }, (error) => {
+          console.error('EmailJS Error:', error);
+          alert('Failed to send message. Please try again.');
+      })
+      .finally(() => {
+          setIsSending(false);
+      });
   }
 
   return (
@@ -64,7 +83,7 @@ const Contact = () => {
             </div>
           </div>
           <div className="contact-form">
-            <form onSubmit={handleSubmit} className="card">
+            <form ref={formRef} onSubmit={handleSubmit} className="card">
               <div className="form-group">
                 <label htmlFor="name">Name</label>
                 <input
@@ -101,8 +120,12 @@ const Contact = () => {
                   placeholder="Your message here..."
                 ></textarea>
               </div>
-              <button type="submit" className="btn btn-full">
-                Send Message
+              <button 
+                type="submit" 
+                className="btn btn-full"
+                disabled={isSending}
+              >
+                {isSending ? 'Sending...' : 'Send Message'}
               </button>
             </form>
           </div>

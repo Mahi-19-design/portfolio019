@@ -2,21 +2,21 @@ import { motion } from 'framer-motion'
 import '../styles/achievements.css'
 
 const achievements = [
-  {
+   {
     id: 1,
+    title: '2nd place in IT-Project Competition',
+    organization: 'Ganpath University',
+    year: '2026',
+    icon: '🥈',
+    desc: 'Secured 2nd place(Category Best) in the IT-Project Competition, developing an innovative solution for sustainable agriculture.Competed with over 50 teams to design a sustainable technology solution for agricultural challenges in semi-arid regions. Focused on UI/UX and data visualization.'
+  },
+  {
+    id: 2,
     title: '3rd Place in SU-Hackathon',
     organization: 'Sangam University',
     year: '2026',
     icon: '🥉',
     desc: 'Secured 3rd place in the 48-hour hackathon, developing an innovative solution for sustainable agriculture.Competed with over 50 teams to design a sustainable technology solution for agricultural challenges in semi-arid regions. Focused on UI/UX and data visualization.'
-  },
-  {
-    id: 2,
-    title: 'IT-Project Competition',
-    organization: 'Ganpath University',
-    year: '2026',
-    icon: '🥈',
-    desc: 'Secured 2nd place(Category Best) in the IT-Project Competition, developing an innovative solution for sustainable agriculture.Competed with over 50 teams to design a sustainable technology solution for agricultural challenges in semi-arid regions. Focused on UI/UX and data visualization.'
   },
   {
     id: 3,
@@ -32,17 +32,17 @@ const Achievements = () => {
   return (
     <section id="achievements" className="achievements">
       <div className="container">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
           <h2 className="section-title">My Achievements</h2>
-          
+
           <div className="achievements-grid">
             {achievements.map((achievement, index) => (
-              <motion.div 
+              <motion.div
                 key={achievement.id}
                 className="achievement-card card"
                 initial={{ opacity: 0, scale: 0.9 }}
