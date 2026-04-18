@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://portfolio019.vercel.app/sitemap.xml
+Sitemap: https://mahi-patel-portfolio.vercel.app/sitemap.xml
