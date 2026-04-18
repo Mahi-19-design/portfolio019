@@ -7,7 +7,6 @@ const educationData = [
     school: 'Swaminarayan University',
     duration: '2025 - 2029 (Expected)',
     desc: 'Artificial Intelligence Enthusiast',
-    icon: '🎓',
     color: '#00f2fe'
   },
   {
@@ -15,7 +14,6 @@ const educationData = [
     school: 'Vidhya Mandir Trust',
     duration: '12th Boards',
     desc: 'Percentage: 80%',
-    icon: '🏫',
     color: '#4facfe'
   },
   {
@@ -23,7 +21,6 @@ const educationData = [
     school: 'Navjivan English Medium School',
     duration: '10th Boards',
     desc: 'Percentage: 94.5%',
-    icon: '📖',
     color: '#a1c4fd'
   }
 ]
@@ -106,9 +103,14 @@ const About = () => {
                       ></motion.div>
                       
                       <div className="edu-card-premium" style={{ '--accent-edu': edu.color }}>
-                        <div className="edu-icon-shell-premium">
-                          <span className="edu-icon-inner-glow" style={{ backgroundColor: edu.color }}></span>
-                          {edu.icon}
+                        <div className="edu-icon-shell-premium" style={{ borderColor: `${edu.color}44` }}>
+                          <span className="edu-icon-inner-glow" style={{ backgroundColor: edu.color, opacity: 0.2 }}></span>
+                          <div style={{ color: edu.color }}>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                              <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                              <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                            </svg>
+                          </div>
                         </div>
                         <div className="edu-content-premium">
                           <h5>{edu.degree}</h5>

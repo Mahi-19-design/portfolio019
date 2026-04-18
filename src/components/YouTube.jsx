@@ -49,15 +49,6 @@ const videos = [
     videoUrl: 'https://www.youtube.com/watch?v=9BrVADK8DDg',
     sourceCode: 'https://github.com/Mahi-19-design/Cloned-projects/tree/main/OpenAI',
     tags: ['CSS', 'HTML']
-  },
-  {
-    id: 6,
-    title: 'Modern Web Architecture',
-    description: 'Discussions on modern application architectures and building scalable web products with industry standards.',
-    thumbnail: 'https://img.youtube.com/vi/H_LgC5iS8E0/maxresdefault.jpg',
-    videoUrl: 'https://www.youtube.com/watch?v=H_LgC5iS8E0',
-    sourceCode: 'https://github.com/Mahi-19-design',
-    tags: ['Architecture', 'Web Design']
   }
 ]
 const getEmbedId = (url) => {

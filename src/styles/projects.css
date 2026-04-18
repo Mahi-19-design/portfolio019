@@ -407,9 +407,11 @@
   color: var(--accent-primary);
 }
 
-.action-link-youtube::before { content: '🎬'; }
-.action-link-docs::before { content: '📄'; }
-.action-link-figma::before { content: '🎨'; }
+.action-link-youtube, .action-link-docs, .action-link-figma {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
 
 .close-modal {
   position: absolute;

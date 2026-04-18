@@ -12,7 +12,7 @@ const Projects = () => {
       id: 1,
       category: 'Full Stack',
       image: 'https://res.cloudinary.com/dy5jgthmt/image/upload/q_auto,f_auto,w_800/v1775722921/Screenshot_2026-04-09_135047_it2wyn.png',
-      icon: '🌐',
+      icon: 'code',
       title: 'CropSphere',
       type: 'Agri-Tech Platform',
       date: 'March 2026',
@@ -27,7 +27,7 @@ const Projects = () => {
       id: 2,
       category: 'Full Stack',
       image: 'https://res.cloudinary.com/dy5jgthmt/image/upload/q_auto,f_auto,w_800/v1775722902/Screenshot_2026-04-09_134957_pt9zle.png',
-      icon: '📄',
+      icon: 'code',
       title: 'AI Resume Optimizer',
       type: 'AI Tool',
       date: 'March 2026',
@@ -42,7 +42,7 @@ const Projects = () => {
       id: 3,
       category: 'Clones',
       image: 'https://res.cloudinary.com/dy5jgthmt/image/upload/v1776427120/Screenshot_2026-04-17_172513_kjbfvb.png',
-      icon: '🛍️',
+      icon: 'code',
       title: 'Heart-Up My Sleeve',
       type: 'E-commerce Clone',
       date: 'February 2026',
@@ -57,7 +57,7 @@ const Projects = () => {
         id: 4,
       category: 'Clones',
       image: 'https://res.cloudinary.com/dy5jgthmt/image/upload/v1776427122/Screenshot_2026-04-17_172532_kmsumz.png',
-      icon: '🧬',
+      icon: 'code',
       title: 'Polkadot Clone',
       type: 'Web3 UI Clone',
       date: 'January 2026',
@@ -72,7 +72,7 @@ const Projects = () => {
       id: 5,
       category: 'Frontend',
       image: 'https://images.unsplash.com/photo-1633356122544-f134324a6cee?q=80&w=2000&auto=format&fit=crop',
-      icon: '🔗',
+      icon: 'code',
       title: 'React API Project',
       type: 'API Integration',
       date: 'December 2025',
@@ -87,7 +87,7 @@ const Projects = () => {
       id: 6,
       category: 'Full Stack',
       image: 'https://res.cloudinary.com/dy5jgthmt/image/upload/v1776427119/Screenshot_2026-04-17_172551_ohu8ga.png',
-      icon: '🚛 ',
+      icon: 'code',
       title: ' FleetFlow',
       type: 'Logistics ERP',
       date: 'April 2026',
@@ -145,7 +145,7 @@ const Projects = () => {
                 <div className="project-content">
                     <div className="project-card-header">
                         <div className="project-icon-glow">
-                            {project.icon}
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
                         </div>
                         <div className="project-info">
                             <h3>{project.title}</h3>
@@ -155,10 +155,12 @@ const Projects = () => {
 
                     <div className="project-meta">
                         <div className="project-meta-item">
-                            <span>📅</span> {project.date}
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ marginRight: '6px' }}><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+                            {project.date}
                         </div>
                         <div className="project-meta-item">
-                            <span>📍</span> {project.location}
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ marginRight: '6px' }}><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                            {project.location}
                         </div>
                     </div>
                     
@@ -195,7 +197,9 @@ const Projects = () => {
                 <div className="modal-content">
                   <div className="modal-header-info">
                     <div className="modal-icon-title">
-                        <div className="modal-icon-box">{selectedProject.icon}</div>
+                        <div className="modal-icon-box">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                        </div>
                         <div>
                             <span className="modal-category">{selectedProject.category}</span>
                             <h2>{selectedProject.title}</h2>
@@ -228,18 +232,21 @@ const Projects = () => {
                     </div>
                     
                     <div className="modal-secondary-actions">
-                       {selectedProject.demo && (
+                      {selectedProject.demo && (
                         <Link to={selectedProject.demo} target="_blank" rel="noopener noreferrer" className="action-link-youtube">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
                            Watch Demo Video
                         </Link>
                       )}
                       {selectedProject.postman && (
                         <Link to={selectedProject.postman} target="_blank" rel="noopener noreferrer" className="action-link-docs">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>
                            Postman API Documentation
                         </Link>
                       )}
                       {selectedProject.figma && (
                         <Link to={selectedProject.figma} target="_blank" rel="noopener noreferrer" className="action-link-figma">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m12 19 7-7 3 3-7 7-3-3z"/><path d="m18 13-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="m2 2 20 20"/></svg>
                            Figma UI Design
                         </Link>
                       )}
